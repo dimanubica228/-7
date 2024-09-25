@@ -1,0 +1,13 @@
+fun isPalindrome(word: String): Boolean {
+    val cleanWord = word.lowercase().replace("[^a-z0-9]".toRegex(), "")
+    return cleanWord == cleanWord.reversed()
+}
+
+fun main() {
+    val word = "А роза упала на лапу Азора"
+    if (isPalindrome(word)) {
+        println("$word - это палиндром")
+    } else {
+        println("$word - это не палиндром")
+    }
+}
